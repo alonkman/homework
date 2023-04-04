@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="login-form">
+        <div class=""></div>
+        <label >Username:</label>
+        <input  id="username"> <br>
+      
+        <label >Password:</label>
+        <input  id="password" > <br>
+      
+        <button id="submit" onclick="login()">Login</button>
+        <div id="alert"></div>
+    </div>
+    <script>
+        function login() {
+            const usernameN = document.getElementById('username').value;
+            const password = 1234;
+            const pswUser = document.getElementById('password').value;
+            const alertN = document.getElementById('alert');
+            if (usernameN.length >= 5 && usernameN.length <=10 && pswUser == password  ) {
+                 alertN.innerHTML = 'welcome'
+                 alertN.style.color = 'green';
+            }else {
+                alertN.innerHTML = 'Error'
+                alertN.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+
+</html>
